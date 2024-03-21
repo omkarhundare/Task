@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 1%;
+  background: #fff;
+  z-index: 10;
+  transition: 0.5s;
+}
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 20px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: #000000;
+  fill: #000000;
+}
+
+nav ul li:hover {
+  transform: scale(1.2);
+}
+nav ul li a:hover {
+  color: #000 !important;
+}
+
+nav .logo {
+  width: 280px;
+  cursor: pointer;
+}
+.nav-btn {
+  visibility: hidden;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  padding: 15px 25px;
+  border: 0;
+  outline: 0;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.nav-btn img {
+  visibility: hidden;
+  width: 16px;
+  margin-left: 8px;
+}
+.menu-icon {
+  display: none;
+  width: 30px;
+}
+
+.header {
+  width: 100%;
+  background: green;
+}
+.back-video {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: -6px;
+}
+
+/* -----------title-content------------  */
+.tittle-text {
+  text-align: center;
+  padding: 20px 10px;
+  background: #000;
+}
+
+.tittle-text h1 {
+  -webkit-text-stroke: 0.5px #fff;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+  margin-left: 0 !important;
+  padding: 20px 0;
+  font-family: "Roboto", Sans-serif;
+  font-size: 55px;
+  font-weight: 600;
+}
+
+.second-section {
+  width: 100%;
+  background: #000;
+  padding-bottom: 5%;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+}
+
+.work {
+  overflow: hidden;
+  position: relative;
+  height: 350px;
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.work img {
+  width: 80%;
+  height: 60%;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.img-pic {
+  border-radius: 10px;
+  position: relative;
+}
+
+.img-pic img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.work:hover img {
+  transform: scale(1.05);
+}
+
+.layer {
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+}
+.work .para1 {
+  color: #fff;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 23px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+.layer p {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  nav ul {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    left: 0;
+    top: 100%;
+
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  nav ul.active {
+    max-height: 250px;
+  }
+  .nav-btn {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+  nav .logo {
+    width: 150px;
+  }
+  nav ul li {
+    font-size: 14px;
+    margin: 10px;
+  }
+  nav ul li:nth-child(1) {
+    padding-top: 7px;
+  }
+
+  nav ul li a {
+    color: #fff;
+  }
+
+  .header {
+    padding: 0;
+  }
+  .user-img {
+    width: 100%;
+    right: auto;
+    position: relative;
+    margin-top: 100px;
+  }
+
+  .header-content {
+    position: absolute;
+    bottom: 0;
+    padding: 0 10%;
+    z-index: 2;
+    padding-bottom: 40px;
+    background: linear-gradient(transparent, #fff);
+  }
+  .btn-container {
+    margin: 5px 0;
+  }
+  .header button {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  .btn-dark {
+    padding: 7px 7px 7px 20px;
+    margin-bottom: 10px;
+  }
+  .btn-dark img {
+    width: 30px;
+    padding: 5px;
+    margin-left: 15px;
+  }
+  .btn-light img {
+    width: 12px;
+    margin-left: 5px;
+  }
+  .header h1 {
+    font-size: 70px;
+    line-height: 60px;
+    margin-bottom: 20px;
+  }
+  .tittle-text h1 {
+    font-size: 30px;
+    padding: 0px;
+  }
+  .work .para1 {
+    font-size: 22px;
+  }
+  .layer p {
+    font-size: 14px;
+  }
+  .work-list {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  }
+}
